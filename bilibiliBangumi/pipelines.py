@@ -15,7 +15,7 @@ class BilibilibangumiPipeline(object):
         foldername = '~/Movies/temp/' + datetime.datetime.now().strftime('%Y%m%d')
         os.system('mkdir -p ' + foldername )
         bashCommand = "youtube-dl -o '" + foldername + "/%(title)s.%(ext)s' "
-        #os.system(bashCommand + targetLink + " &")
-        #for test   
-        print(bashCommand + targetLink + " &")
+        os.system(bashCommand + targetLink + " &")
+        #for test
+        print("======================================" + bashCommand + targetLink + " &")
         return item
